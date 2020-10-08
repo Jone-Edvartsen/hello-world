@@ -1,23 +1,22 @@
 #This will be coded in PYTHON
 #Goal: make a simple function calculating the percentage of correct answers from the test
 
-def IqScore(list):
+def IqScore(liste):
     #Maybe list should be predefined to contain only NaN? To ensure same length for the code to work.
     #This should take in a list [A B C D E F G H I J K L M N O P X R S T U V W X Y Z] which should be 25 long
     #This is the actual correct list [B(1) E(2) A(3) F(4) B(5) D(6) E(7) A(8) B(9) F(10) E(11) B(12) ...
     # C(13) A(14) F(15) C(16) D(17) E(18) A(19) F(20) B(21) A(22) D(23) A(24) C(25)]
     #Only 1 given answer is correct for each. If not answered, column should show NaN
     
-    correct_list = [B E A F B D E A B F E B C A F C D E A F B A D A C]
+    correct_list = ['B','E','A','F','B','D','E','A','B','F','E','B','C','A','F','C','D','E','A','F','B','A','D','A','C']
     
     How_many_correct = 0                      #This sets the intial sum to zero
     for index in range(len(correct_list)):    #For every correct, 1 is added
-        if list(index) == correct_list(index)
+        if liste[index] == correct_list[index]:
             How_many_correct = How_many_correct + 1
-        end
-    end
+
+    #This calculates the percentage of correct answers
+    percentage_correct = (How_many_correct/len(correct_list))*100
    
-   percentage_correct = (How_many_correct/len(correct_list))*100
-   
-   return 'You got ' + num2str(percentage_correct) + '% correct on the logical test!'
+    return 'You got ' + str(percentage_correct) + '% correct on the logical test!'
     
